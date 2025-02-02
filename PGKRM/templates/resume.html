@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/resume.css' %}" />
+</head>
+
+<body>
+  <section class="cv-section" id="cv-form">
+    <div class="cv-main">
+      <div class="d-flex flex-row justify-content-center"><img class="reg-img" src="{% static 'img/mainlogo.jpeg' %}"></div>
+      <h1 class="text-center cv-head my-1">Resume Generator</h1>
+
+      <section class="cv-cont">
+        <div class="mt-5">
+          <h3 class="cv-subhead">Personal Info</h3>
+
+          <div class="form-group mt-3">
+            <label for="nameFeild">Full Name</label>
+            <input type="text" id="nameField"  class="form-control input-tag" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="contact">Contact no.</label>
+            <input type="number" id="contact"  class="form-control input-tag" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="emailAdress">Email Id</label>
+            <input type="text" id="email"  class="form-control input-tag" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="Adress">Permanent Address</label>
+            <textarea type="text" id="adress"  class="form-control input-tag"></textarea>
+          </div>
+          
+          <h5 class="mt-5 text-secondary">Social Media Handles</h5>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input type="text" id="linkedin"  class="form-control input-tag" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="socialMedia">Github</label>
+            <input type="text" id="social"  class="form-control input-tag" />
+          </div>
+          <div class="form-group pt-3">
+            <label for="">Upload your profile image</label>
+            <input id="image" type="file" class="form-control input-tag">
+
+          </div>
+        </div>
+        <div class="mt-5">
+          <h3 class="cv-subhead">Profesional Detail</h3>
+          <div class="form-group mt-3" id="ac">
+            <label for="experience">Academic Details</label>
+            <textarea type="text" id="academicDetails" placeholder="State your Academic qualifications"
+              class="form-control acField" ></textarea>
+            <div class="container text-center mt-1" id="acButton">
+              <button onclick="addNewAc()" class="bt  acButton">
+                Add another
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group mt-3" id="we">
+            <label for="experience">Work Experience</label>
+            <textarea type="text" id="experience" placeholder="Give a brief description of your previous work experiences" class="form-control weField"
+              ></textarea>
+            <div class="container text-center mt-1" id="weButton">
+              <button onclick="addNewWe()" class="bt  weButton">
+                Add another
+              </button>
+            </div>
+          </div>
+          <div class="form-group mt-3" id="ach">
+            <label for="achievemets">Achievements</label>
+
+            <textarea type="text" id="achievemets" placeholder="State your achievements" class="form-control achField"
+              ></textarea>
+
+            <div class="container text-center mt-1" id="achButton">
+              <button onclick="addNewAch()" class="bt achButton">
+                Add another
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container text-center mt-4">
+        <button onclick="generateCV()" class="btn  btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" id="cv-template">
+    <div id="cv-box" class="row resume-cont mt-3">
+      <div class="col-md-4 text-left my-2 py-3 left resume-part1">
+        <!-- 1st coloumn -->
+        <div class="container text-center">
+          <img id="imageT"
+            src="https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+            alt="" class="profileImg" />
+        </div>
+        <div class="container text-center">
+          <div class="container pt-2" style="color:black;">
+            <p id="NameT2">Tanuj Kashyap</p>
+            <p id="contactT">7489790337</p>
+            <p id="emailT">tanujkashyap@gmail.com</p>
+            <p id="adressT">17, phae dgujgg</p>
+            <hr />
+          </div>
+        </div>
+
+        <h4 class="text-center" style="color:black;">Social Media</h4>
+        <div class="container text-left pt-3" style="color:black;">
+          <p class=" text-center"><a style="text-decoration: none;" id="linkedinT" href="#" target="_main1">LinkedIn</a></p>
+          <p class=" text-center"><a style="text-decoration: none;" id="socialT" href="#" target="_main2">Github</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-8 py-5">
+        <!-- 2nd column -->
+        <h1 id="NameT1" class="text-center" style="color:black;">
+          Tanuj Kashyap
+        </h1>
+        <!-- <experience -->
+
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="text-center">Work Experience</h3>
+          </div>
+          <div class="card-body">
+            <ul id="weT">
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- academeic -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="text-center">Academic Qualifications</h3>
+          </div>
+          <div class="card-body">
+            <ul id="acT">
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- acchievemt -->
+
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="text-center">Achievement</h3>
+          </div>
+          <div class="card-body">
+            <ul id="achT">
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                voluptates! Ea fuga a rerum maxime nostrum, blanditiis
+                doloribus repellendus necessitatibus libero saepe hic quos, at
+                quasi consectetur porro! Impedit, molestiae.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container mt-3 d-flex flex-row justify-content-center">
+          <div>
+          <button id="printbtn"  onclick="downloadAsPDF()" class="btn print-btn">Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <script src="{% static 'js/resume.js' %}"></script>
+</body>
+
+</html>

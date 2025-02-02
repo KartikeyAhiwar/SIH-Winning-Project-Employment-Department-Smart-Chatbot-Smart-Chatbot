@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Punjab Ghar-Ghar Rozgar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/login1.css' %}" />
+  </head>
+
+  <body>
+    <section class="login-section">
+      <div class="log-cont">
+        <div class="d-flex flex-row justify-content-center">
+          <img class="log-img" src="{% static 'img/rozgar.png' %}" />
+        </div>
+        <h1 class="text-center log-head ">User Login</h1>
+        <div class="d-flex flex-row justify-content-center">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="log-form">
+              {% if messages %}
+                {{ message.tags }}
+                <div class="alert alert-info" role="alert">
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+              <form action="/login/" method="post">
+                {% csrf_token %}
+                <div class="form-group input-field">
+                  <input type="text" class="form-control form-input" id="username" name="username" placeholder="Username" required />
+                </div>
+
+                <div class="form-group input-field">
+                  <input type="password" class="form-control form-input" id="password" name="password" placeholder="Password" required />
+                </div>
+                <p class="text-center">
+                  Don't have an account? <a href="/register">Register</a>
+                </p>
+                <div class="text-center">
+                  <button type="submit" class="btn sub-btn my-3">Login</button>
+                </div>
+              </form>
+            </div>
+            <div class="text-center mt-3"><a class="another-log" href="/login1">Login through Face Verification</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
+      }
+    </script>
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="{% static 'js/audio_script.js' %}" id="script"></script>
+  </body>
+</html>
