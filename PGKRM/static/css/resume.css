@@ -1,0 +1,112 @@
+#cv-template{
+    display: none;
+}
+body{
+    background:linear-gradient(35deg,rgb(246, 163, 122),rgb(254, 172, 20));
+}
+.profileImg{
+    border: 1px solid black;
+    width: 200px;
+    border-radius: 200px;
+}
+.cv-section{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.cv-main{
+    padding:2em 2em 3em 2em;
+    border-radius: 1.2em;
+    background-color: white; 
+    width:fit-content;
+    height:auto;
+    margin:13vh 0em 4em 0em;
+}
+.input-tag{
+    height:3em;
+    font-size: 1.1em;
+    font-weight: 500;
+    color:rgb(45, 30, 2);
+}
+.cv-cont{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-group{
+    width:40em;
+}
+.left{
+    color: beige;
+background-color: black;
+}
+.reg-img{
+    height:7em;
+}
+.form-group label{
+    font-size: 1.1em;
+    color:orange;
+}
+.cv-head{
+    color:orangered;
+}
+.cv-subhead{
+    color:darkorange;
+}
+.acButton, .achButton, .weButton{
+    color:white;
+    background-color: rgba(255, 166, 0, 0.714);
+}
+.btn-lg{
+    font-size: 1.3em;
+    font-weight: 500;
+    color:white;
+    padding:0.4em 0.8em 0.4em 0.8em;
+    background-color: rgb(248, 96, 41);
+}
+.profileImg{
+    height:10em;
+    width:10em;
+    border-radius: 5em;
+}
+.resume-cont{
+    border-radius: 1em;
+    background-color: white;
+    padding: 2em 1em 2em 1em;
+    color:black;
+}
+.resume-part1{
+    border-radius: 0.4em;
+    background-color: lightgray;
+}
+.print-btn{
+    font-size: 1.3em;
+    font-weight: 500;
+    color:white;
+    padding:0.4em 0.8em 0.4em 0.8em;
+    background-color: rgb(248, 96, 41);
+}
+.bt{
+    border:none;
+    border-radius: 0.3em;
+    font-size: 1.05em;
+    padding:0.3em 0.8em 0.3em 0.8em;
+}
+.btn:hover{
+    font-size: 1.3em;
+    font-weight: 500;
+    color:white;
+    padding:0.4em 0.8em 0.4em 0.8em;
+    background-color: rgb(248, 96, 41);
+}
+.acField, .achField, .weField{
+    height:10em;
+}
+.card-header h3{
+    font-size: 1.5em;
+}
+#printbtn{
+    display:none;
+}

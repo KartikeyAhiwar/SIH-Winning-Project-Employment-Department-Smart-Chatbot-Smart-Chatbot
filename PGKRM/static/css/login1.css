@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+}
+.login-section{
+    background:linear-gradient(35deg,rgb(243, 146, 162),rgb(245, 211, 42));
+    padding:10vh 0em 9em 0em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.log-form{
+    width:30em;
+    height:fit-content;
+    border-radius: 1em;
+    padding:1.5em 0em 1.5em 0em;
+}
+.log-cont{
+    border-radius: 1em;
+    width:35em;
+    padding: 1em 0em 1em 0em;
+    transition: 0.3s;
+}
+.log-cont:hover{
+    -webkit-box-shadow: 0 0 30px rgb(49, 44, 44);
+    box-shadow: 0 0 30px rgb(49, 44, 44);
+}
+.input-field{
+    margin-bottom: 1.2em;
+}
+.form-input{
+    height:3em;
+    font-size: 1.3em;
+    font-weight: 500;
+    color:orange;
+}
+.sub-btn{
+    font-size: 1.4em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    background-color: orange;
+    color:white;
+    padding:0.4em 1em 0.5em 1em;
+    border-color: orange;
+}
+.log-img{
+    height:7em;
+}
+.log-head{
+    color:white;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin:1em 0em 1em 0em;
+}
+.btn:hover{
+    font-size: 1.4em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    background-color: orange;
+    color:white;
+    padding:0.4em 1em 0.5em 1em;
+    border-color: orange;
+}
+.another-log{
+    text-decoration: none;
+    color:rgb(127, 87, 31);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+}
+@media screen and (max-width:562px){
+    .log-form{
+        width:90vw;
+    }
+    .log-cont{
+        width:95vw;
+    }
+}
+@media screen and (max-width:386px){
+    .log-img{
+        height:4em;
+    }
+    .log-form{
+        padding:0.7em 0em 0.7em 0em;
+    }
+    .log-head{
+        font-size: 1.8em;
+        font-weight: 600;
+        margin:0em 0em 0em 0em;
+    }
+    .input-field{
+        margin-bottom: 0.6em;
+    }
+    .form-input{
+        height:2em;
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+    .sub-btn{
+        font-size: 1.1em;
+        font-weight: 400;
+        border-radius: 0.2em;
+        padding:0.2em 0.6em 0.2em 0.6em;
+    }
+    .btn:hover{
+        font-size: 1.1em;
+        font-weight: 400;
+        border-radius: 0.2em;
+        padding:0.2em 0.6em 0.2em 0.6em;
+    }
+}

@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FF671F;
+    padding:0.7em 2em 0.7em 2em;
+}
+.navbar-brand{
+    color:white;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+}
+.nav-link{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color:white;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.nav-link:hover{
+    color:white;
+}
+.nav-item{
+    padding:0em 1em 0em 1em;
+}
+.land-page{
+    margin-top: 6em;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.land-cont{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:54em;
+}
+.land-img{
+    height:7em;
+}
+.land-head{
+    padding:1em 2em 0em 2em;
+}
+.land-head h1{
+    font-weight: 500;
+    font-size: 2.2em;
+}
+.vacancy{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:84em;
+    flex-flow: wrap;
+}
+.vacancies{
+    height:6em;
+    width:16em;
+    margin: 1.5em 0.5em 0em 0.5em;
+}
+.info{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.1em;
+    font-weight: 400;
+    background-color: rgba(248, 182, 28, 0.936);
+    padding:0.5em 0em 0.5em 0em;
+}
+.card-text{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.value{
+    height:6em;
+    background-color: white;
+}
+.job-category{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow:wrap;
+    width:60em;
+}
+.job-type{
+    width:10em;
+    height:12.8em;
+    margin:2em 1em 0em 1em;
+    padding-top: 0.3em;
+    border-radius: 1em;
+    transition:0.3s;
+}
+.job-type:hover{
+    -webkit-box-shadow: 0 0 30px rgb(185, 180, 180);
+    box-shadow: 0 0 30px rgb(185, 180, 180);
+}
+.job-img{
+    height:9em;
+}
+.marqtag{
+    font-weight: 500;
+    background: linear-gradient(#e1a05b,#e78114);
+    color:black;
+    padding:0.2em 0em 0.2em 0em;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.not-down{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-flow: wrap;
+    width:65em;
+}
+.nd-cont{
+    width:26em;
+    height:30em;
+}
+.nd-head{
+    font-size: 1.3em;
+    font-weight: 500;
+    background: linear-gradient(#f4b26a,rgba(248, 182, 28, 0.936));
+    color:black;
+}
+.list-group{
+    overflow-y: scroll;
+}
+footer{
+    background-color: #fb7334;
+}
+.foot-cont{
+    width:30em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+.foot-text{
+    color:white;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+.foot-end{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+.marqfoot{
+    color:white;
+    font-size: 1.2em;
+    width:30em;
+}
+.foot-cont .nav-link{
+    padding:0em 0.6em 0em 0.6em;
+}
+@media screen and (max-width:1120px){
+    .vacancy{
+        justify-content: space-evenly;
+        width:95vw;
+    }
+}
+@media screen and (max-width:951px){
+    .job-category{
+        width:95vw;
+    }
+}
+@media screen and (max-width:928px){
+    .not-down{
+        justify-content: center;
+        width:95vw;
+    }
+}
+@media screen and (max-width:810px){
+    .land-img{
+        display:none;
+    }
+}
+@media screen and (max-width:590px){
+    .job-category{
+        width:95vw;
+    }
+}
+@media screen and (max-width:562px){
+    .land-head h1{
+        font-size: 1.8em;
+    }
+    .land-head{
+        padding:1em 0.5em 0em 0.5em;
+    }
+}
+@media screen and (max-width:516px){
+    .foot-end{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:448px){
+    .foot-cont{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:433px){
+    .land-head h1{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    .land-head div{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width:310px){
+    .vacancy{
+        width:14em;
+    }
+}

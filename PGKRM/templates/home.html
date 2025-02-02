@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Punjab Ghar-Ghar Rozgar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg nav navbar-custom fixed-top">
+        <div>
+            <a class="navbar-brand" href="#">PGRKAM</a>
+        </div>
+        <div>
+            <button class="navbar-toggler px-0" style="border:none;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><img src="{% static 'img/navicon.png' %}" /></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class=" nav-link" id="toggleButton" data-bs-toggle="button"
+                            onclick="toggle()">Sound</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/register" >Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/cv_generation">Resume</a>
+                    </li>
+                    <li><div id="google_translate_element"></div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="land-page">
+        <div class="land-cont">
+            <div>
+                <img class="land-img" src="{% static 'img/mainlogo.jpeg' %}" />
+            </div>
+            <div class="land-head d-flex flex-column align-items-center">
+                <h1 id="heading" class="text-center" onmouseover="speak(document.getElementById('heading').textContent)"
+                    onmouseleave="stopSpeaking()">PUNJAB GHAR GHAR ROZGAR</h1>
+                <p class="text-center">
+                    Department of Employment Generation,<br />
+                    Skill Development & Training- Govt. Of Punjab, India
+                </p>
+            </div>
+            <div>
+                <img class="land-img" src="{% static 'img/rozgar.png' %}" />
+            </div>
+        </div>
+    </div>
+    <hr class="my-3">
+    <div class="d-flex flex-row justify-content-center px-3">
+        <div class="vacancy">
+            <div class="card vacancies" id="AvailableGovtJob"
+                onmouseover="speak(document.getElementById('AvailableGovtJob').textContent)"
+                onmouseleave="stopSpeaking()">
+                <div class="card-header text-center info">
+                    Available Govt. Jobs
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-center">12345678</p>
+                </div>
+            </div>
+            <div class="card vacancies" id="AvailablePrivateJob"
+                onmouseover="speak(document.getElementById('AvailablePrivateJob').textContent)"
+                onmouseleave="stopSpeaking()">
+                <div class="card-header text-center info">
+                    Available Private Jobs
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-center">12345678</p>
+                </div>
+            </div>
+            <div class="card vacancies" id="jobSeeker"
+                onmouseover="speak(document.getElementById('jobSeeker').textContent)" onmouseleave="stopSpeaking()">
+                <div class="card-header text-center info">
+                    Registered Job Seekers
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-center">12345678</p>
+                </div>
+            </div>
+            <div class="card vacancies" id="registerdEmployers"
+                onmouseover="speak(document.getElementById('registerdEmployers').textContent)"
+                onmouseleave="stopSpeaking()">
+                <div class="card-header text-center info">
+                    Registered Employees
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-center">12345678</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <marquee class="marqtag mt-5" scrollamount="10">List of Registered- Recruiting agents in Punjab for sending abroad |
+        Vacancies advertised by Subordinate Service Selection Board Punjab are available at https://sssb.punjab.gov.in/
+    </marquee>
+    <div class="d-flex flex-column align-items-center my-5">
+        <div class="job-category mb-3">
+            <div class="job-type text-center" id="jobs" onmouseover="speak(document.getElementById('jobs').textContent)"
+                onmouseleave="stopSpeaking()"><a href="https://www.pgrkam.com/govt-jobs"><img class="job-img"
+                        src="{% static 'img/jobs.png' %}"></a>
+                <div class="card-text">JOB</div>
+            </div>
+            <div class="job-type text-center" id="JobsForDisables"
+                onmouseover="speak(document.getElementById('JobsForDisables').textContent)"
+                onmouseleave="stopSpeaking()"><a href="https://www.pgrkam.com/search-results/?pwd=1"><img
+                        class="job-img" src="{% static 'img/jobsforsiablity.png'%}"></a>
+                <div class="card-text">Jobs for Disableds</div>
+            </div>
+            <div class="job-type text-center" id="jobsForWomen"
+                onmouseover="speak(document.getElementById('jobsForWomen').textContent)" onmouseleave="stopSpeaking()">
+                <a href="https://www.pgrkam.com/search-results/?job_type=2&gender=1"><img class="job-img"
+                        src="{% static 'img/jobsforwomen..png' %}"></a>
+                <div class="card-text">Jobs for Women</div>
+            </div>
+            <div class="job-type text-center" id="localservice"
+                onmouseover="speak(document.getElementById('localservice').textContent)" onmouseleave="stopSpeaking()">
+                <a href="https://www.pgrkam.com/local-services"><img class="job-img" src="{% static 'img/localservice.png' %}"></a>
+                <div class="card-text">Local Service</div>
+            </div>
+        </div>
+        <div class="job-category">
+            <div class="job-type text-center" id="selfemployment"
+                onmouseover="speak(document.getElementById('selfemployment').textContent)"
+                onmouseleave="stopSpeaking()"><a href="https://www.pgrkam.com/self-employment"><img class="job-img"
+                        src="{% static 'img/selfemployment.png'%}"></a>
+                <div class="card-text">Self Employment</div>
+            </div>
+            <div class="job-type text-center" id="skill"
+                onmouseover="speak(document.getElementById('skill').textContent)" onmouseleave="stopSpeaking()"><a
+                    href="https://www.pgrkam.com/aboutus"><img class="job-img" src="{% static 'img/skill.jpg' %}"></a>
+                <div class="card-text">Skill</div>
+            </div>
+            <div class="job-type text-center" id="InductionIntoArmedForces"
+                onmouseover="speak(document.getElementById('InductionIntoArmedForces').textContent)"
+                onmouseleave="stopSpeaking()"><a href="http://afpipunjab.org/"><img class="job-img"
+                        src="{% static 'img/soldier.png' %}"></a>
+                <div class="card-text">Induction into Armed Forces</div>
+            </div>
+            <div class="job-type text-center" id="Counselling"
+                onmouseover="speak(document.getElementById('Counselling').textContent)" onmouseleave="stopSpeaking()"><a
+                    href="//www.pgrkam.com/counselling-sessions"><img class="job-img" src="{% static 'img/concelling.png' %}"></a>
+                <div class="card-text">Counselling</div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="not-down mb-5 mx-3">
+            <div class="card nd-cont mx-3 mt-1 mb-3">
+                <div class="card-header text-center nd-head">
+                    Notifications
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                </ul>
+            </div>
+            <div class="card nd-cont mx-3 my-3">
+                <div class="card-header text-center nd-head">
+                    Downloads
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                    <li class="list-group-item text-center"><a href="#" style="text-decoration: none;">Cras justo
+                            odio</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
+        }
+    </script>
+    <script type="text/javascript"
+        src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    <script src="{% static 'js/audio_script.js' %}" id="script"></script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "K89Hw1gl380833nqTq-ef",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="K89Hw1gl380833nqTq-ef"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+</body>
+<footer class="pb-1 pt-1">
+    <div class="foot-content d-flex flex-row justify-content-center mb-1">
+        <div class="foot-cont mx-1 px-1">
+            <div><a class="nav-link " href="#">Career Information</a></div>
+            <div><a class="nav-link " href="#">Feedback</a></div>
+            <div><a class="nav-link " href="#">Sitemap</a></div>
+            <div><a class="nav-link " href="#">Help</a></div>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+        <marquee class="marqfoot mt-1" scrollamount="10"><b>Disclaimer</b>:Government of Punjab does not charge any
+            money for the private job vacancies.
+        </marquee>
+    </div>
+    <div class="foot-end mt-3">
+        <div class="foot-text text-center mx-3 my-1">Websit Visit Count: <b>1236713</b></div>
+        <div class="foot-text text-center mx-3 my-1">Created by: <b><i>The GO GETTERs </i></b></div>
+    </div>
+    <hr class="my-0 mt-1" style="color:white">
+    <div class="foot-text text-center mt-1">Copyright &copy; GO_GETTER Team</div>
+</footer>
+
+</html>

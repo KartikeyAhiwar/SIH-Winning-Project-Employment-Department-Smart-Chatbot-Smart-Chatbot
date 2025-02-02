@@ -1,0 +1,28 @@
+.not-visible{
+    display:none;
+}
+.log-title{
+    color:orange;
+}
+.face-btn{
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    color:white;
+    border-radius:0.3em;
+    background-color: rgb(222, 155, 31);
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.btn:hover{
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    color:white;
+    border-radius:0.3em;
+    background-color: rgb(222, 155, 31);
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.another-log{
+    text-decoration: none;
+    color:gray;
+    font-size: 1.1em;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+}

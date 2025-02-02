@@ -1,0 +1,33 @@
+body{
+    background:linear-gradient(35deg,rgb(246, 163, 122),rgb(254, 172, 20));
+}
+.prof-sec{
+    background-color: white;
+    -webkit-box-shadow: 0 0 30px rgb(76, 72, 72);
+    box-shadow: 0 0 30px rgb(76, 72, 72);
+    padding:5vh 2em 1.2em 2em;
+    border-radius: 1.5em;
+    width:80vw;
+}
+.info-field{
+    border-radius: 0.5em;
+    padding:0.5em 0.9em 0.5em 0.9em;
+    font-size: 1.1em;
+    border-style: solid;
+    background-color: rgb(242, 237, 237);
+    border-width: 0.01em;
+    border-color: rgb(141, 135, 135);
+}
+.prof-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.prof-title{
+    color:orange;
+}
+.prof-img{
+    height:10em;
+    width:10em;
+    border-radius: 5em;
+}

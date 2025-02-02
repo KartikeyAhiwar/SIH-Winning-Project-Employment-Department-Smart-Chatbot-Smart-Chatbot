@@ -1,0 +1,94 @@
+.reg-head{
+    font-size: 2.2em;
+    font-weight: 700;
+    color:darkorange;
+    padding: 1em 0em 1em 0em;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+.form-cont{
+    width:30em;
+}
+.register-section{
+    height:auto;
+    padding: 6em 0em 6em 0em;
+    background:linear-gradient(35deg,rgb(246, 163, 122),rgb(254, 172, 20));
+}
+.reg-img{
+    height:7em;
+}
+.register-cont{
+    width:35em;
+    background-color: white;
+    color:darkorange;
+    border-radius: 1em;
+    transition:0.3s;
+}
+.register-cont:hover{
+    -webkit-box-shadow: 0 0 30px rgb(49, 44, 44);
+    box-shadow: 0 0 30px rgb(49, 44, 44);
+}
+.reg-btn{
+    font-weight: 700;
+    font-size: 1.3em;
+    background-color: orange;
+    color:white;
+    padding: 0.4em 1em 0.4em 1em;
+}
+.form-group label{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.btn:hover{
+    font-weight: 700;
+    font-size: 1.3em;
+    background-color: orange;
+    color:white;
+    padding: 0.4em 1em 0.4em 1em;
+}
+.input-tag{
+    height:3em;
+    font-size: 1.1em;
+    font-weight: 500;
+    color:rgb(45, 30, 2);
+}
+@media screen and (max-width:733px){
+    .form-cont{
+        width:90vw;
+    }
+    .register-cont{
+        width:95vw;
+    }
+    .register-section{
+        padding: 5vh 0em 6em 0em;
+    }
+}
+@media screen and (max-width:423px){
+    .reg-head{
+        font-size: 1.8em;
+        font-weight: 500;
+        padding: 0.6em 0em 0.6em 0em;
+    }
+    .reg-btn{
+        font-weight: 600;
+        font-size: 1.1em;
+        padding: 0.3em 0.8em 0.3em 0.8em;
+    }
+    .btn:hover{
+        font-weight: 600;
+        font-size: 1.1em;
+        padding: 0.3em 0.8em 0.3em 0.8em;
+    }
+    .reg-img{
+        height:5em;
+    }
+}
+@media screen and (max-width:360px){
+    .reg-head{
+        font-size: 1.5em;
+    }
+    .input-tag{
+        height:2em;
+        font-size: 1em;
+    }
+}

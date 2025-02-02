@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Punjab Ghar-Ghar Rozgar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  </head>
+
+  <body>
+    <h1 class="text-center log-title mb-5 mt-3">Face Verification Login</h1>
+    {% if messages %}
+                {{ message.tags }}
+                <div class="alert alert-info" role="alert">
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+    <div class="text-center" >
+      <video style="border-radius: 1em;" autoplay="true" id="video-element"></video>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center">
+  <div id="img-element"></div>
+</div>
+  <div class="text-center mt-3">
+      <button class="btn face-btn mx-3" id="capture-btn">take photo</button>
+      <button class="btn face-btn mx-3" id="reload-btn">reload</button>
+  </div> 
+  <div class="text-center mt-3 mb-5"><a class="another-log" href="/login">Login through Username and Password</a></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+  </body>
+</html>

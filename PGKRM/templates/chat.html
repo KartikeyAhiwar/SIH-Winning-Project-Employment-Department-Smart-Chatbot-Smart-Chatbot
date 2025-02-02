@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punjab Ghar Ghar Rozgar</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>QyeryQueller</h2>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <div class="message received">Hello! How can I assist you today?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var sendBtn = document.getElementById('send-btn')
+        var userInput = document.getElementById('user-input')
+        var chatBox = document.getElementById('chat-box')
+      
+        sendBtn.addEventListener('click', function () {
+          var message = userInput.value.trim()
+          if (message !== '') {
+            appendMessage(message, 'sent')
+            userInput.value = ''
+            scrollToBottom()
+            // TODO: Handle user message and generate bot response
+            $.ajax({
+              url: 'http://127.0.0.1:8000/chat_gpt/?prompt=' + message,
+              type: 'GET',
+              dataType: 'json', // added data type
+              success: function (res) {
+                console.log(res)
+                // alert(res);
+                appendMessage(res, 'received')
+              }
+            })
+          }
+        })
+      
+        function appendMessage(message, type) {
+          var messageElement = document.createElement('div')
+          messageElement.classList.add('message', type)
+          messageElement.innerText = message
+          chatBox.appendChild(messageElement)
+        }
+      
+        function scrollToBottom() {
+          chatBox.scrollTop = chatBox.scrollHeight
+        }
+      })
+    </script>
+  </body>
+</html>
